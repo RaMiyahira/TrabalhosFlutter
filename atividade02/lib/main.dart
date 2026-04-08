@@ -149,6 +149,20 @@ class _CadastroState extends State<Cadastro> {
 
               SizedBox(height: 20),
 
+              Row(
+                children: [
+                  Checkbox(
+                    value: marcado,
+                    onChanged: (valor) {
+                      setState(() {
+                        marcado = valor!;
+                      });
+                    },
+                  ),
+                  Expanded(child: Text("Aceito os termos de uso")),
+                ],
+              ),
+
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
